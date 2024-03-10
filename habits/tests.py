@@ -17,12 +17,12 @@ class HabitAPITest(APITestCase):
             id=100,
             user=self.user,
             place="home",
-            time="12:00",
+            time="13:00",
             action="not drink alcohol",
-            reward="15 DKK",
+            reward="20 dollars",
             periodicity=1,
             is_public=False,
-            duration_time="00:00:30",
+            duration_time="00:00:40",
         )
 
     def test_get_list_habits(self):
@@ -38,9 +38,9 @@ class HabitAPITest(APITestCase):
         data = {
             "user": self.user.pk,
             "place": "home",
-            "time": "12:00",
+            "time": "14:00",
             "action": "drink water",
-            "reward": "10 DKK",
+            "reward": "15 dollars",
             "periodicity": 1,
             "is_public": False,
             "duration_time": "00:01",
